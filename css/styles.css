@@ -1,0 +1,154 @@
+@import "bgcolors.css";
+@import "screen-576px.css";
+@import "screen-576-1920px.css";
+@import "flexbox.css";
+
+*{
+    padding: 0;margin:0;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+    color: #222222;
+    max-width: 1920px;
+  
+}
+.title-1,.vk-content>ul,.in-1,.ok-1{
+    display: flex;
+    flex-direction: column;
+}
+
+
+div{
+    box-sizing: border-box;
+}
+section{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    border:1px solid brown;
+}
+.container{
+   
+}
+
+
+.titles,.title-2,.study-title,.study-skills{
+    display:flex;
+    flex-direction: row;
+}
+.white,.vk-content{
+    color:white;
+}
+.bluetext{
+    color:#1e61b9;
+}
+.orange-text{
+    color: #ff6800;
+}
+.center-me {
+    margin: 0 auto;
+  }
+  
+ .menu li {
+	display: block;
+    padding: 1rem 2.4rem;
+}
+ .menu a{
+    text-decoration: none;
+    color: white;
+   font-size: 1.65rem;
+    font-weight: bold;
+}
+
+
+.titles,.titles {
+   
+}
+
+
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+
+
+
+.upper{
+    text-transform: uppercase;
+}
+
+
+
+.btn-vk{
+    color:#486dad;
+    background: white;
+}
+.btn-fb{
+    float: left;
+    color:#486dad;
+    background: white;
+     
+   
+}
+.btn-in{
+    color:black;
+}
+
+.btn-in a{
+    background-color: white;
+    font-weight: 700;
+}
+
+  
+
+
+img {
+    vertical-align: middle;
+  
+  }
+  .middle > * {
+    vertical-align: middle;
+    padding: 0rem .5rem;
+  }
+    .vk-content>ul>li,.fb-content>ul>li,.dot-style-none{
+
+    list-style-type: none;
+    }
+
+    .fb a{
+        color: white;
+        background: linear-gradient(45deg, #6448c1 0%,#207cca 77%,#5582c7 100%);
+    }
+
+
+    .in>div{
+    
+    }
+    .in-1{
+        order:3;
+    }
+
+
+
+    .in-title{
+    margin-top: 14.5rem;
+    }
+    .in ul{
+        margin-right: 1rem;
+        margin-top:-2.5rem;
+    }
+
+
+
+    .icons>div{
+    
+    }
+
+    .icons-1  div>div{
+    }
+
+
+   
