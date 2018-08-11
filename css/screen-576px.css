@@ -36,7 +36,7 @@
         flex-flow: row wrap;
         justify-content: space-around;
         text-align: center;
-        padding-top: 9rem;
+        padding-top: 8rem;
     }
     .title-2 >div {
         
@@ -117,7 +117,7 @@
         display:flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
     
     .vk-content{
@@ -181,7 +181,7 @@
     }
     .in{
         display:flex;
-        padding-top: 9rem;
+        padding-top: 8.5rem;
         align-items: center;
         
     }
@@ -335,7 +335,7 @@
         marketing
     */
     .marketing{
-        margin-top: 10rem;
+        margin-top: 8rem;
     }
     .blueviolet{
         color:#6c3e8e;
@@ -399,7 +399,7 @@
     */
 
     footer{
-        padding-top: 6rem;
+        padding-top: 8rem;
     }
 
     footer>div{
@@ -421,32 +421,67 @@
     }
     footer img{
         width: 6rem;
+        height: 6rem;
         padding-right: 1.6rem;
     }
-
+    
+    div.middle{
+        display: flex;
+        align-items: center;
+       
+    }
 
     div.contacts{
-        margin-top: 5rem;
-        flex-basis: 40%;
+        
     }
 
     .contacts>ul{
         display: flex;
-        height: 20rem;
-        width: 100vw;
-        justify-content: space-around;
-        text-align: center;
+    height: 25rem;
+    text-align: center;
+    flex-flow: row wrap;
     }
 
     .contacts>ul>li{
-        padding: .7rem 0rem;
-        font-size: 2.4rem;
+        font-size: 2.8rem;
+    }
+
+    .vk-link {
+        flex-basis: 50%;
+    }
+    .vk-link h4{
+        padding-right: 18rem;
+    }
+    .vk-link >div{
+        padding-left: 2rem;
+    }
+    .phone-num{
+        flex-basis: 50%;
+        text-align: right;
+    }
+    .phone-num h4{
+        margin-right: 4rem;
+    }
+    .phone-num .middle{
+        flex-flow: row-reverse wrap;
+        margin-right: 2rem;
+    }
+    .email{
+        order:3;
+        flex-basis: 100%;
+        padding-top: 1.5rem;
+    }
+    .email >div{
+        flex-flow:column wrap;
+    }
+    .middle > * {
+        vertical-align: middle;
+        padding: 0rem 1.5rem;
     }
     div.map{
-        flex-basis: 80%;
-        padding-left: 4.8rem;
-        font-size: 2rem;
-        text-align: center;
+        padding-top: 4rem;
+    font-size: 2.5rem;
+    text-align: center;
     }
     .map h2 {
         font-size: 4rem;
@@ -456,8 +491,8 @@
         width: 60rem;
     border-radius: 6rem;
     overflow: hidden;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 14rem;
     /* padding-left: .5rem; */
     }
     .google-map>iframe{
@@ -468,4 +503,192 @@
     nav {
         color:#fff;
     }
+    .form-control {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        border: none;
+        border-bottom: 2px solid blue;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label{
+            font-size: .97rem;
+            font-weight: 700;    
+        }
+    
+      .popup{
+        z-index: 102;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .popup-dilog {
+        margin: 0 auto;
+        width: 30.3rem;
+        height: 30.3rem;
+        background: url("../img/popup-bg.png")no-repeat center top;
+        background-size: cover;
+    }
+      .popup-content{
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-flow: column wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        pointer-events: auto;
+        border-radius: 1rem;
+        align-items: center;
+        font-size: 1.5rem;
+      }
+      .popup-header{
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+      }
+      .popup-title{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.1;
+        padding-top: 5rem;
+      }
+      .popup-title{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.1;
+        padding-top: 5rem;
+        margin-left: 3rem;
+      }
+      .popup-body form{
+        margin-top: 2.7rem;
+        text-align: center;
+      }
+    
+      .close{
+        float: right;
+        cursor: pointer;
+        background: url(../img/popup/close-btn.png) no-repeat center top;
+        background-size: cover;
+        padding: .7rem;
+        border: none;
+        margin: .4rem 1rem; 
+        }
+        .popup-btn{
+            color: white;
+            background: linear-gradient(45deg, #6448c1 0%,#207cca 77%,#5582c7 100%);
+            padding: .8rem 2rem;
+            margin-top: 3.3rem;
+            display: inline-block;
+            font-size: .9rem;
+            border-radius: .8rem;
+            box-shadow: 0rem 0rem 1rem rgba(50, 50, 50, 1);
+            cursor: pointer;
+        }.form-control {
+            display: block;
+            width: 100%;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            border: none;
+            border-bottom: 2px solid blue;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            }
+            
+            .form-group {
+                margin-bottom: 1rem;
+            }
+            .form-group label{
+                font-size: 1.5rem;
+                font-weight: 700;    
+            }
+        
+          .popup{
+            z-index: 102;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .popup-dilog {
+            margin: 0 auto;
+            width: 30.3rem;
+            height: 30.3rem;
+            background: url("../img/popup-bg.png")no-repeat center top;
+            background-size: cover;
+            border-radius: 1rem;
+        }
+          .popup-content{
+            position: relative;
+            display: flex;
+            width: 100%;
+            flex-flow: column wrap;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            pointer-events: auto;
+            
+            align-items: center;
+            font-size: 1.5rem;
+          }
+          .popup-header{
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+          }
+        
+          .popup-title{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            padding-top: 3rem;
+            margin-left: 3rem;
+          }
+          .popup-body form{
+            margin-top: 2.7rem;
+            text-align: center;
+          }
+        
+          .close{
+            float: right;
+            cursor: pointer;
+            background: url(../img/popup/close-btn.png) no-repeat center top;
+            background-size: cover;
+            padding: .7rem;
+            border: none;
+            margin: .4rem 1rem; 
+            }
+            .popup-btn{
+                color: white;
+                background: linear-gradient(45deg, #6448c1 0%,#207cca 77%,#5582c7 100%);
+                padding: .8rem 2rem;
+                margin-top: 3.3rem;
+                display: inline-block;
+                font-size: .9rem;
+                border-radius: .8rem;
+                box-shadow: 0rem 0rem 1rem rgba(50, 50, 50, 1);
+                cursor: pointer;
+            }
 }

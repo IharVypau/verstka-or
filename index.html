@@ -457,21 +457,21 @@
                         контакты
                     </h1>
                     <ul class="">
-                            <li class="dot-style-none">
+                            <li class="dot-style-none vk-link">
                                     <h4>Мы Вконтакте</h4>
                                     <div class="middle">   
                                         <img class=""src="./img/footer/vk.png" >
                                         <span>/o.r.media<span>
                                     </div>
                             </li>
-                            <li class="dot-style-none f-align-s-end">
+                            <li class="dot-style-none f-align-s-end email">
                                     <h4>Наша Почта</h4>
                                     <div class="middle">   
                                         <img class=""src="./img/footer/mail.png" >
                                         <span>oblast.razvitia@gmail.com<span>
                                     </div>
                             </li>
-                            <li class="dot-style-none">
+                            <li class="dot-style-none phone-num">
                                     <h4>Наш Телефон</h4>
                                     <div class="middle">   
                                         <img class=""src="./img/footer/phone.png" >
@@ -496,6 +496,43 @@
             </div>
         </div>
 </footer>
+<div class="popup pop fade">
+    <div class="popup-dilog">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title flexItem">
+                        <p>Оставьте заявку и</p> 
+                        <p>получите бесплатную</p> 
+                        <p>консультацию!</p>
+                </div>
+                <a type="button" class="close cls">
+                    <span></span>
+                </a>   
+            </div>
+            <div class="popup-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">&nbsp;Как к вам обращаться?</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPhone">По какому номеру звонить?</label>
+                        <input type="text" class="form-control" id="inputPhone" placeholder="+XXX XX XXX-XX-XX">
+                    </div>
+                    
+                        <a type="button" class="popup-btn upper cls" >
+                            получить консультацию
+                        </a>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="popupbg pop fade"></div>
+
 <script>      
     const diffSize=92;
     const checkWidth=function(){
@@ -527,8 +564,39 @@
             checkWidth();
         
 
+            const popup=(function(){
+                
+                let popupEls=Array.from(document.getElementsByClassName('pop'));
+                let showBtns=Array.from(document.getElementsByClassName('btn'));
+                let hideBtns=Array.from(document.getElementsByClassName('cls'));
+                const init=()=>{
+                    showBtns.forEach(function(elem) {
+                        elem.addEventListener("click", function(e){show();},false);
+                    });
+                    hideBtns.forEach(function(elem) {
+                        elem.addEventListener("click", function(e){hide();},false);
+                    });
+                }
+                const show=(e)=>{
+                    popupEls.forEach((el,i)=>{
+                        el.classList.remove("fade");
+                        el.classList.add("show");
+                    });
+                  
+                };
+                const hide=(e)=>{
+                    popupEls.forEach((el,i)=>{
+                        el.classList.remove("show");
+                        el.classList.add("fade");
+                    });
+                    
+                }
 
-
+                return {
+                    init
+                }
+            }());
+            popup.init();
         /*
         
         */
