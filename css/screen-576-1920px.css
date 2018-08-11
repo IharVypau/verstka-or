@@ -9,6 +9,9 @@
   }
   .title-1{
       margin-left:2.1rem;
+      width: 43rem;
+      height: 23rem;
+      overflow: hidden;
   }
   .title-1-1{
       padding-top: 4rem;
@@ -22,11 +25,9 @@
     line-height: 1.86;
   }
   .title-2 >div{
-      font-size: 1.28rem;
-      align-self: stretch;
-      margin-right: 2rem;
-      font-weight: 600;
-      width: 12rem;
+    font-size: 1.28rem;
+    font-weight: 700;
+    padding: .8rem 1.5rem .3rem .5rem;
   }
   p.heading{
       font-size: 3rem;
@@ -40,23 +41,32 @@
   }
   .title-2{
       flex-flow: row wrap;
-      justify-content: flex-end;
       text-align: center;
-      padding-top: 2.5rem;
+      justify-content: flex-end;
+      padding-right: 1.5rem;
   }
+  .title-2.wrapper{
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 22rem;
+    /* width: 42rem; */
+    overflow: hidden;
+    flex-basis: 50%;
+  }
+
   .title-2 >div>p strong {
       font-size: 3rem;
       font-weight: 900;
   }
   .title-2-2{
-      padding-top: 10.5rem;
+    align-self: flex-end;
   }
   .title-2-3{
       padding-right: 3rem;
   }
   .vk-title{
       display: block;
-      padding-top: 5rem;
+      padding-top: 4rem;
   }
   
   .vk-title-2>div{
@@ -171,7 +181,7 @@
   }
 
   .in{
-    padding-top: 14.5rem;
+    padding-top: 15rem;
       justify-content: flex-end;
   }
 
@@ -522,6 +532,7 @@
     height: 30.3rem;
     background: url("../img/popup-bg.png")no-repeat center top;
     background-size: cover;
+    border-radius: 1rem;
 }
   .popup-content{
     position: relative;

@@ -4,12 +4,12 @@
         background-repeat: no-repeat;
         background-size:cover;
         background-position: top center;
-        min-width: 400px;
+        min-width: 240px;
         max-width: 1920px;
     }
     .title-1{
         order: -1;
-        margin-top: 26rem;
+        margin-top: 27rem;
         margin-left: 1rem;
     }
     .title-1-1{
@@ -35,15 +35,19 @@
     .title-2{
         flex-flow: row wrap;
         justify-content: space-around;
+        padding-top: 4rem;
         text-align: center;
-        padding-top: 8rem;
     }
+    .title-2.wrapper{
+        height: 30rem;
+        width: 92rem;
+        overflow: hidden;
+        justify-content: space-around;
+      }
+
     .title-2 >div {
-        
-        
-        align-self: stretch;
-       
         font-weight: 500;
+        padding: 1.3rem 0rem;
     }
     .title-2 >div>p strong {
         font-size: 4.5rem;
@@ -104,7 +108,7 @@
     }
     .vk-title{
         display: block;
-        padding-top: 10rem;
+        padding-top: 6rem;
     }
     .vk-title h1, .fb-title h1, .in-2 h1 {
         display: block;
