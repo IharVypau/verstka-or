@@ -596,7 +596,30 @@
                     init
                 }
             }());
+            const anchors=(function(){
+                const aboutOffset=90;
+                const marketingOffset=800;
+                const contactsOffset=6000;
+                const studyOffset=3950;
+                const init=()=>{
+                    about.addEventListener("click",function(e){ myscroll(aboutOffset); });
+                    marketing.addEventListener("click",function(e){ myscroll(marketingOffset); });
+                    study.addEventListener("click",function(e){ myscroll(studyOffset); });
+                    contacts.addEventListener("click",function(e){ myscroll(contactsOffset); });
+                };
+                
+                const myscroll=(offset)=>{
+                    
+                    window.scroll({
+                        top: offset, 
+                        left: 0, 
+                        behavior: 'smooth' 
+                    });
+                }
+                return { init}
+            }());
             popup.init();
+            anchors.init();
         /*
         
         */
