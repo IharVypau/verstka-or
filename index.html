@@ -17,17 +17,17 @@
 
 </head>
 <body>
-    <section class="about">
+    <section class="aboutSection">
         <header>
             <div class="container">
                 <nav>
                     
                     <ul class="menu f-justify-center">
-                        <li class="item"><a href="#">О нас</a></li>
-                        <li class="item"><a href="#">Продвижение</a></li>
-                        <li class="item"><a href="#"></a></li>
-                        <li class="item"><a href="#">Обучение</a></li>
-                        <li class="item"><a href="#">Контакты</a></li>
+                        <li class="item"><a href="#"id="about">О нас</a></li>
+                        <li class="item"><a href="#" id="marketing">Продвижение</a></li>
+                        <li class="item"><a href="#" ></a></li>
+                        <li class="item"><a href="#" id="study">Обучение</a></li>
+                        <li class="item"><a href="#" id="contacts">Контакты</a></li>
                     </ul>
                     <div class="toggler">
                             <button class="navbar-toggler" type="button">
@@ -90,7 +90,7 @@
             </div>
         </header>
     </section>
-    <section class="marketing">
+    <section class="marketingSection">
         <div class="container">  
             <div class="vk-title white text-center">
                     <h1>ваше продвижение в</h1>
@@ -300,7 +300,7 @@
                 <div class="ok-slider "></div>
         </div>
     </section>
-    <section class="study">
+    <section class="studySection">
         <div class="container">
             <div class="study flexContainer flex-column  f-align-items-start  ">
                     
@@ -451,7 +451,7 @@
             </div>
         </div>
     </section>
-    <footer class="contacts">
+    <footer class="contactsSection">
         <div class="flexContainer">
             <div class="contacts flexItem">
                 
@@ -596,11 +596,11 @@
                     init
                 }
             }());
-             const anchors=(function(){
-                let aboutOffset=document.getElementsByClassName("about")[0].offsetTop;
-                let marketingOffset=document.getElementsByClassName("marketing")[0].offsetTop;
-                let contactsOffset=document.getElementsByClassName("contacts")[0].offsetTop;
-                let studyOffset=document.getElementsByClassName("study")[0].offsetTop;;
+            const anchors=(function(){
+                const aboutOffset=document.getElementsByClassName("aboutSection")[0].offsetTop;
+                const marketingOffset=document.getElementsByClassName("marketingSection")[0].offsetTop;
+                const contactsOffset=document.getElementsByClassName("contactsSection")[0].offsetTop;
+                const studyOffset=document.getElementsByClassName("studySection")[0].offsetTop;;
                 const init=()=>{
                     about.addEventListener("click",function(e){ myscroll(aboutOffset); });
                     marketing.addEventListener("click",function(e){ myscroll(marketingOffset); });
@@ -620,6 +620,7 @@
             }());
             popup.init();
             anchors.init();
+
         /*
         
         */
