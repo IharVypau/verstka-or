@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    <section class="header-section">
+    <section class="about">
         <header>
             <div class="container">
                 <nav>
@@ -90,7 +90,7 @@
             </div>
         </header>
     </section>
-    <section>
+    <section class="marketing">
         <div class="container">  
             <div class="vk-title white text-center">
                     <h1>ваше продвижение в</h1>
@@ -300,7 +300,7 @@
                 <div class="ok-slider "></div>
         </div>
     </section>
-    <section >
+    <section class="study">
         <div class="container">
             <div class="study flexContainer flex-column  f-align-items-start  ">
                     
@@ -451,7 +451,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="contacts">
         <div class="flexContainer">
             <div class="contacts flexItem">
                 
@@ -596,11 +596,11 @@
                     init
                 }
             }());
-            const anchors=(function(){
-                const aboutOffset=90;
-                const marketingOffset=800;
-                const contactsOffset=6000;
-                const studyOffset=3950;
+             const anchors=(function(){
+                let aboutOffset=document.getElementsByClassName("about")[0].offsetTop;
+                let marketingOffset=document.getElementsByClassName("marketing")[0].offsetTop;
+                let contactsOffset=document.getElementsByClassName("contacts")[0].offsetTop;
+                let studyOffset=document.getElementsByClassName("study")[0].offsetTop;;
                 const init=()=>{
                     about.addEventListener("click",function(e){ myscroll(aboutOffset); });
                     marketing.addEventListener("click",function(e){ myscroll(marketingOffset); });
