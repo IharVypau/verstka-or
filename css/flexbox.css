@@ -1,0 +1,81 @@
+
+.f-justify-center{
+    justify-content: center;
+}
+.f-justify-start{
+    justify-content: flex-start;
+}
+.f-justify-end{
+    justify-content: flex-end;
+}
+.f-align-center{
+    align-content: center;
+}
+.f-align-start{
+    align-content: flex-start;
+}
+.f-align-content-end{
+    align-content: flex-end;
+}
+.f-align-items-center{
+    align-items: center;
+}
+.f-align-items-start{
+    align-items: flex-start;
+}
+.f-align-items-end{
+    align-items: flex-end;
+}
+.f-align-s-end{
+    align-self: flex-end;
+}
+.f-align-s-center{
+    align-self: center;
+}
+.flexContainer {
+    display: flex;
+}
+.flexItem {
+    flex: 1;
+}
+.non-flex-item{
+    flex:0;
+}
+.green-border{
+    border:1px solid green;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.fullHeight {
+    height: 100vh;
+}
+.whiteBackground {
+    background: white;
+}
+.blueBackground {
+    background: lightskyblue;
+}
+.main{
+    order: 2;
+    padding: 20px;
+    border-left: 1px solid #777777;
+    border-right: 1px solid #777777;
+}
+.sidebar {
+    width: 20%;
+    background: white;
+    padding: 20px;
+}
+.sidebarLeft{
+    order: 1;
+}
+.sidebarRight{
+    order: 3;
+}
