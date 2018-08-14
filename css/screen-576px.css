@@ -9,12 +9,12 @@
     }
     .title-1{
         order: -1;
-        margin-top: 27rem;
-        margin-left: 1rem;
+        margin-top: 21rem;
+        width: 100%;
     }
     .title-1-1{
-        width: 56rem;
-        margin-top: 4.7rem;
+        padding: 0rem .5rem;
+        margin-top: 11rem;
     }
     .title-1 > div.mobille{
         display: block;
@@ -25,11 +25,11 @@
 
     .title-1-1 p {
         letter-spacing: 0.067em;
-    font-size: 2.3rem;
+    font-size: 2.26rem;
     font-weight: 400;
     text-align: center;
     padding: 0;
-    line-height: 1.42;
+    line-height: 1.45;
     }
 
     .title-2{
@@ -161,7 +161,7 @@
     }
     .fb-content{
         order: 2;
-        margin-top: 2rem;
+        margin-top: 6rem;
         align-items: center;
     }
     .fb ul {
