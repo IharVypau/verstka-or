@@ -102,7 +102,7 @@
                 <div class="slider" >     
                     <div class="slider-1 ">
                     </div>  
-                    <a type="button" class="btn btn-vk upper " styly="width:3rem;height:2rem;   " >
+                    <a type="button" class="btn btn-vk upper batButton" styly="width:3rem;height:2rem;   " >
                             узнать больше
                     </a>
                 </div>     
@@ -176,7 +176,7 @@
                         </h1>
                     </div>
                     <div class="fb-2">
-                        <a type="button" class="btn btn-fb upper" >
+                        <a type="button" class="btn btn-fb upper batButton" >
                             узнать больше
                         </a>
                     </div>
@@ -240,7 +240,7 @@
                         </h1>
                     </div>
                     <div class="in-3 btn-in  f-align-s-center">
-                        <a type="button" class="btn  upper" styly="width:3rem;height:2rem;   " >
+                        <a type="button" class="btn  upper batButton"  >
                             узнать больше
                         </a>
                     </div>
@@ -290,7 +290,7 @@
                             </h1>
                         </div>
                         <div class="ok-3 btn-ok  ">
-                            <a type="white" class="btn btn-fb upper" >
+                            <a type="white" class="btn btn-fb upper batButton" >
                                 узнать больше
                             </a>
                             
@@ -310,7 +310,7 @@
                             </h1>
                     </div>
                     <div class="study-btn f-align-s-center button">
-                            <a type="white" class="btn  upper" styly="width:3rem;height:2rem;   " >
+                            <a type="white" class="btn  upper batButton"  >
                                     узнать больше
                             </a>
                     </div>
@@ -369,7 +369,7 @@
                     <p>(ИЛИ 6 ПРИЧИН ВЫБРАТЬ НАС)</p>
                     <div class="btn">
                         
-                        <a class="upper text-center" href="#">
+                        <a class="upper text-center batButton" href="#">
                             получить <br>консультацию
                         </a>
                     </div>
@@ -567,11 +567,11 @@
             const popup=(function(){
                 
                 let popupEls=Array.from(document.getElementsByClassName('pop'));
-                let showBtns=Array.from(document.getElementsByClassName('btn'));
+                let showBtns=Array.from(document.getElementsByClassName('batButton'));
                 let hideBtns=Array.from(document.getElementsByClassName('cls'));
                 const init=()=>{
                     showBtns.forEach(function(elem) {
-                        elem.addEventListener("click", function(e){show();},false);
+                        elem.addEventListener("click", function(e){show();e.preventDefault();},false);
                     });
                     hideBtns.forEach(function(elem) {
                         elem.addEventListener("click", function(e){hide();},false);
