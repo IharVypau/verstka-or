@@ -21,19 +21,19 @@
         <header>
             <div class="container">
                 <nav>
-                    
-                    <ul class="menu f-justify-center">
+                    <div class="toggler">
+                        <button class="navbar-toggler" type="button">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <ul class="menu hidden f-justify-center">
                         <li class="item"><a href="#"id="about">О нас</a></li>
                         <li class="item"><a href="#" id="marketing">Продвижение</a></li>
-                        <li class="item"><a href="#" ></a></li>
+                        <li class="item hide"><a href="#" ></a></li>
                         <li class="item"><a href="#" id="study">Обучение</a></li>
                         <li class="item"><a href="#" id="contacts">Контакты</a></li>
                     </ul>
-                    <div class="toggler">
-                            <button class="navbar-toggler" type="button">
-                                    <span class="navbar-toggler-icon"></span>
-                            </button>
-                    </div>
+                    
                 </nav>
                 <div class="titles">
                     <div class="phone"></div>
@@ -102,7 +102,7 @@
                 <div class="slider" >     
                     <div class="slider-1 ">
                     </div>  
-                    <a type="button" class="btn btn-vk upper " styly="width:3rem;height:2rem;   " >
+                    <a type="button" class="btn btn-vk upper batButton" styly="width:3rem;height:2rem;   " >
                             узнать больше
                     </a>
                 </div>     
@@ -176,7 +176,7 @@
                         </h1>
                     </div>
                     <div class="fb-2">
-                        <a type="button" class="btn btn-fb upper" >
+                        <a type="button" class="btn btn-fb upper batButton" >
                             узнать больше
                         </a>
                     </div>
@@ -240,7 +240,7 @@
                         </h1>
                     </div>
                     <div class="in-3 btn-in  f-align-s-center">
-                        <a type="button" class="btn  upper" styly="width:3rem;height:2rem;   " >
+                        <a type="button" class="btn  upper batButton"  >
                             узнать больше
                         </a>
                     </div>
@@ -290,7 +290,7 @@
                             </h1>
                         </div>
                         <div class="ok-3 btn-ok  ">
-                            <a type="white" class="btn btn-fb upper" >
+                            <a type="white" class="btn btn-fb upper batButton" >
                                 узнать больше
                             </a>
                             
@@ -310,7 +310,7 @@
                             </h1>
                     </div>
                     <div class="study-btn f-align-s-center button">
-                            <a type="white" class="btn  upper" styly="width:3rem;height:2rem;   " >
+                            <a type="white" class="btn  upper batButton"  >
                                     узнать больше
                             </a>
                     </div>
@@ -369,7 +369,7 @@
                     <p>(ИЛИ 6 ПРИЧИН ВЫБРАТЬ НАС)</p>
                     <div class="btn">
                         
-                        <a class="upper text-center" href="#">
+                        <a class="upper text-center batButton" href="#">
                             получить <br>консультацию
                         </a>
                     </div>
@@ -537,14 +537,17 @@
 
 <script>      
     const diffSize=92;
+    let isMobileDevice=false;
+    let menu=document.getElementsByClassName('menu')[0];
     const checkWidth=function(){
          width=window.innerWidth;
                 
                 if(width<=MOBILE_SIZE){
-                    
+                    isMobileDevice=true;
                  }else{
                     fontSize=(width/diffSize)+"px";
                     document.documentElement.style.fontSize=fontSize;
+                    isMobileDevice=false;
                  }
             }
             const MOBILE_SIZE=576;
@@ -561,17 +564,35 @@
             let fontSize=(width/diffSize)+"px";
             document.documentElement.style.fontSize=fontSize;
             window.addEventListener("resize", myScript);
+           
             checkWidth();
         
+            const toggle=(function(){
+                const toggler= document.getElementsByClassName('navbar-toggler')[0];
+                let menu=document.getElementsByClassName('menu')[0];
+                let isVisible=false;
+                toggler.addEventListener('click',function(event){
+                    if(isVisible){
+                         menu.classList.remove("visible");
+                     menu.classList.add("hidden");
+                        isVisible=false;
+                    }else{
+                        menu.classList.remove("hidden");
+                        menu.classList.add("visible");
+                        isVisible=true;
+                    }
+                        event.preventDefault();
+                    });
+            }());
 
             const popup=(function(){
                 
                 let popupEls=Array.from(document.getElementsByClassName('pop'));
-                let showBtns=Array.from(document.getElementsByClassName('btn'));
+                let showBtns=Array.from(document.getElementsByClassName('batButton'));
                 let hideBtns=Array.from(document.getElementsByClassName('cls'));
                 const init=()=>{
                     showBtns.forEach(function(elem) {
-                        elem.addEventListener("click", function(e){show();},false);
+                        elem.addEventListener("click", function(e){show();e.preventDefault();},false);
                     });
                     hideBtns.forEach(function(elem) {
                         elem.addEventListener("click", function(e){hide();},false);
@@ -596,20 +617,26 @@
                     init
                 }
             }());
+
             const anchors=(function(){
+                
                 const aboutOffset=document.getElementsByClassName("aboutSection")[0].offsetTop;
                 const marketingOffset=document.getElementsByClassName("marketingSection")[0].offsetTop;
                 const contactsOffset=document.getElementsByClassName("contactsSection")[0].offsetTop;
                 const studyOffset=document.getElementsByClassName("studySection")[0].offsetTop;;
                 const init=()=>{
-                    about.addEventListener("click",function(e){ myscroll(aboutOffset); });
-                    marketing.addEventListener("click",function(e){ myscroll(marketingOffset); });
-                    study.addEventListener("click",function(e){ myscroll(studyOffset); });
-                    contacts.addEventListener("click",function(e){ myscroll(contactsOffset); });
+                    about.addEventListener("click",function(e){ myscroll(aboutOffset); e.preventDefault(); });
+                    marketing.addEventListener("click",function(e){ myscroll(marketingOffset);e.preventDefault(); });
+                    study.addEventListener("click",function(e){ myscroll(studyOffset);e.preventDefault(); });
+                    contacts.addEventListener("click",function(e){ myscroll(contactsOffset);e.preventDefault(); });
                 };
                 
                 const myscroll=(offset)=>{
-                    
+                     if(isMobileDevice){
+                        offset=offset-menu.scrollHeight;
+                       
+                        //alert(offset);
+                     }
                     window.scroll({
                         top: offset, 
                         left: 0, 
