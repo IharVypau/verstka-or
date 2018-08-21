@@ -620,22 +620,21 @@
 
             const anchors=(function(){
                 
-                const aboutOffset=document.getElementsByClassName("aboutSection")[0].offsetTop;
-                const marketingOffset=document.getElementsByClassName("marketingSection")[0].offsetTop;
-                const contactsOffset=document.getElementsByClassName("contactsSection")[0].offsetTop;
-                const studyOffset=document.getElementsByClassName("studySection")[0].offsetTop;;
+                const _about=document.getElementsByClassName("aboutSection")[0];
+                const _marketing=document.getElementsByClassName("marketingSection")[0];
+                const _contacts =document.getElementsByClassName("contactsSection")[0];
+                const _study=document.getElementsByClassName("studySection")[0];;
                 const init=()=>{
-                    about.addEventListener("click",function(e){ myscroll(aboutOffset); e.preventDefault(); });
-                    marketing.addEventListener("click",function(e){ myscroll(marketingOffset);e.preventDefault(); });
-                    study.addEventListener("click",function(e){ myscroll(studyOffset);e.preventDefault(); });
-                    contacts.addEventListener("click",function(e){ myscroll(contactsOffset);e.preventDefault(); });
+                    about.addEventListener("click",function(e){ myscroll(_about.offsetTop+_about.clientHeight/10); e.preventDefault(); });
+                    marketing.addEventListener("click",function(e){ myscroll(_marketing.offsetTop + _marketing.clientHeight/10);e.preventDefault(); });
+                    study.addEventListener("click",function(e){ myscroll(_study.offsetTop + _study.clientHeight/6); e.preventDefault(); });
+                    contacts.addEventListener("click",function(e){ myscroll(_contacts.offsetTop + _contacts.clientHeight/4);e.preventDefault(); });
                 };
                 
                 const myscroll=(offset)=>{
                      if(isMobileDevice){
                         offset=offset-menu.scrollHeight;
                        
-                        //alert(offset);
                      }
                     window.scroll({
                         top: offset, 

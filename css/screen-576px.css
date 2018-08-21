@@ -206,7 +206,7 @@
     .fb{
         display: flex;
         flex-flow: column wrap;
-        padding-top: 20rem;
+        padding-top: 18rem;
         align-items: center;
      }
     
@@ -244,7 +244,7 @@
         
     }
     .in-1{
-        margin-top: 7rem
+        margin-top: 4rem
     }
     .in-1 li{
         padding: 2.4rem 0rem 2.4rem 14rem;
@@ -271,7 +271,7 @@
 
     .ok{
         display:flex;
-        padding-top: 7rem;
+        padding-top: 10rem;
         align-items: center;
     }
     
@@ -393,7 +393,7 @@
         marketing
     */
     .marketing{
-        margin-top: 8rem;
+        margin-top: 11rem;
     }
     .blueviolet{
         color:#6c3e8e;
@@ -547,9 +547,9 @@
 
     .google-map{
         width: 60rem;
-    border-radius: 6rem;
+    border-radius: 3rem;
     overflow: hidden;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 14rem;
     /* padding-left: .5rem; */
     }
